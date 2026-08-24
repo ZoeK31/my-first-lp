@@ -106,4 +106,74 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  /* ---------- お問い合わせフォームのバリデーション ---------- */
+  const contactForm = document.getElementById('contact-form');
+
+  if (contactForm) {
+    const nameField = document.getElementById('contact-name');
+    const emailField = document.getElementById('contact-email');
+    const messageField = document.getElementById('contact-message');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const fieldConfigs = [
+      {
+        input: nameField,
+        errorEl: document.getElementById('error-name'),
+        validate: (value) => (value.trim() === '' ? 'お名前を入力してください。' : ''),
+      },
+      {
+        input: emailField,
+        errorEl: document.getElementById('error-email'),
+        validate: (value) => {
+          if (value.trim() === '') return 'メールアドレスを入力してください。';
+          if (!emailPattern.test(value.trim())) return 'メールアドレスの形式が正しくありません。';
+          return '';
+        },
+      },
+      {
+        input: messageField,
+        errorEl: document.getElementById('error-message'),
+        validate: (value) => (value.trim() === '' ? 'お問い合わせ内容を入力してください。' : ''),
+      },
+    ];
+
+    const showFieldError = ({ input, errorEl }, message) => {
+      const field = input.closest('.form-field');
+      field.classList.toggle('has-error', Boolean(message));
+      errorEl.textContent = message;
+    };
+
+    const validateField = (config) => {
+      const message = config.validate(config.input.value);
+      showFieldError(config, message);
+      return message === '';
+    };
+
+    fieldConfigs.forEach((config) => {
+      config.input.addEventListener('blur', () => validateField(config));
+      config.input.addEventListener('input', () => {
+        if (config.input.closest('.form-field').classList.contains('has-error')) {
+          validateField(config);
+        }
+      });
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const results = fieldConfigs.map((config) => validateField(config));
+      const isValid = results.every(Boolean);
+
+      if (!isValid) {
+        const firstInvalid = fieldConfigs.find((_, i) => !results[i]);
+        firstInvalid.input.focus();
+        return;
+      }
+
+      alert('送信しました');
+      contactForm.reset();
+      fieldConfigs.forEach((config) => showFieldError(config, ''));
+    });
+  }
 });

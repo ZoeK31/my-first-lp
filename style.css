@@ -661,6 +661,88 @@ ul { list-style: none; }
 }
 
 /* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact {
+  padding: 140px 0;
+  background: var(--color-bg-alt);
+}
+
+.contact-form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field label {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-brown);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-sans-jp);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  padding: 14px 18px;
+  resize: vertical;
+  transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(90, 80, 68, 0.5);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-brown-deep);
+  box-shadow: 0 0 0 3px rgba(74, 49, 35, 0.1);
+}
+
+.form-field.has-error input,
+.form-field.has-error textarea {
+  border-color: #a94438;
+  box-shadow: 0 0 0 3px rgba(169, 68, 56, 0.1);
+}
+
+.form-error {
+  min-height: 1.2em;
+  font-size: 0.82rem;
+  color: #a94438;
+  letter-spacing: 0.02em;
+}
+
+.contact-submit {
+  align-self: center;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
