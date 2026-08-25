@@ -3,37 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAFÉ MORI | 森の中のコーヒーショップ</title>
-<meta name="description" content="CAFÉ MORI は、緑に囲まれた隠れ家のようなコーヒーショップです。厳選した豆を使った一杯と、静かなひとときをお楽しみください。">
+<title>森田 陽菜 | Profile</title>
+<meta name="description" content="フロントエンドエンジニア 森田陽菜の自己紹介ページです。スキルや趣味、連絡先を紹介しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="noise-overlay"></div>
-
-<header class="site-header" id="header">
+<header class="site-header">
   <div class="header-inner">
-    <a href="#hero" class="logo" data-nav-link>
-      <span class="logo-mark">☕</span>
-      <span class="logo-text">CAFÉ MORI</span>
-    </a>
-
-    <nav class="main-nav" id="main-nav">
+    <a href="#hero" class="logo" data-nav-link>Hina Morita</a>
+    <nav class="main-nav">
       <ul>
-        <li><a href="#hero" data-nav-link>Home</a></li>
-        <li><a href="#about" data-nav-link>Story</a></li>
-        <li><a href="#menu" data-nav-link>Menu</a></li>
-        <li><a href="#access" data-nav-link>Access</a></li>
-        <li><a href="#contact" data-nav-link>お問い合わせ</a></li>
+        <li><a href="#about" data-nav-link>About</a></li>
+        <li><a href="#skills" data-nav-link>Skills</a></li>
+        <li><a href="#hobby" data-nav-link>Hobby</a></li>
+        <li><a href="#contact" data-nav-link>Contact</a></li>
       </ul>
     </nav>
-
-    <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="main-nav">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
@@ -41,240 +30,124 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-leaf hero-leaf--1"></div>
-    <div class="hero-leaf hero-leaf--2"></div>
-    <div class="hero-content" data-animate>
-      <p class="hero-eyebrow">Since 2016 &mdash; Kyoto, Japan</p>
-      <h1 class="hero-title">
-        <span>静けさに、</span>
-        <span>一杯のコーヒーを。</span>
-      </h1>
+    <div class="hero-inner" data-animate>
+      <div class="avatar">森</div>
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-title">森田 陽菜</h1>
+      <p class="hero-role">フロントエンドエンジニア / Web デザイナー</p>
       <p class="hero-lead">
-        木漏れ日が差し込む店内で、丁寧に淹れた一杯とゆっくりと流れる時間を。<br>
-        CAFÉ MORI は、日々の喧騒から少し離れた場所にある小さな森のカフェです。
+        使いやすく、心地よい体験を作ることが好きです。<br>
+        HTML / CSS / JavaScript を中心に、日々学びながら制作しています。
       </p>
       <div class="hero-actions">
-        <a href="#menu" class="btn btn--primary" data-nav-link>メニューを見る</a>
-        <a href="#access" class="btn btn--ghost" data-nav-link>アクセス</a>
+        <a href="#contact" class="btn btn--primary" data-nav-link>お問い合わせ</a>
+        <a href="#about" class="btn btn--ghost" data-nav-link>詳しく見る</a>
       </div>
     </div>
-    <a href="#about" class="scroll-cue" data-nav-link aria-label="次のセクションへスクロール">
-      <span class="scroll-cue-line"></span>
-      <span class="scroll-cue-text">Scroll</span>
-    </a>
   </section>
 
-  <!-- ===== ABOUT / STORY ===== -->
-  <section class="about" id="about">
-    <div class="section-inner about-inner">
-      <div class="about-image" data-animate>
-        <div class="about-image-frame"></div>
-      </div>
-      <div class="about-text" data-animate>
-        <p class="section-eyebrow">Our Story</p>
-        <h2 class="section-title">森の静けさを、<br>カップの中に。</h2>
-        <p class="about-copy">
-          CAFÉ MORI（カフェ・モリ）は「森」から名付けられた小さな喫茶店。
-          世界各地の農園から届く一粒一粒を自家焙煎し、素材の個性を丁寧に引き出しています。
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-inner" data-animate>
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">自己紹介</h2>
+      <div class="about-text">
+        <p>
+          はじめまして、森田陽菜です。Web制作の専門学校を卒業後、フロントエンドエンジニアとして活動しています。
+          ユーザーにとって分かりやすく、見ていて気持ちの良いデザインを心がけています。
         </p>
-        <p class="about-copy">
-          店内には木の温もりと観葉植物、そして静かな音楽だけ。
-          忙しい毎日の中で、ふっと一息つける時間をお届けしたいという想いで、
-          一杯ずつ心を込めて淹れています。
+        <p>
+          最近はJavaScriptを使ったインタラクティブな表現や、レスポンシブデザインの学習に力を入れています。
+          新しい技術を学ぶことが好きで、日々の制作を通してスキルアップに取り組んでいます。
         </p>
-        <ul class="about-points">
-          <li><span class="about-points-icon">🌿</span>自家焙煎の厳選スペシャルティ豆</li>
-          <li><span class="about-points-icon">🍰</span>季節ごとに変わる手作りスイーツ</li>
-          <li><span class="about-points-icon">🪑</span>緑に囲まれた居心地の良い空間</li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===== MENU ===== -->
-  <section class="menu" id="menu">
-    <div class="section-inner">
-      <div class="section-head" data-animate>
-        <p class="section-eyebrow">Menu</p>
-        <h2 class="section-title">こだわりのメニュー</h2>
-        <p class="section-lead">豆の個性を活かしたコーヒーと、季節の素材を使ったフードをご用意しています。</p>
-      </div>
-
-      <div class="menu-tabs" role="tablist" aria-label="メニューカテゴリ" data-animate>
-        <button class="menu-tab is-active" role="tab" aria-selected="true" data-menu-tab="coffee">Coffee</button>
-        <button class="menu-tab" role="tab" aria-selected="false" data-menu-tab="sweets">Sweets</button>
-        <button class="menu-tab" role="tab" aria-selected="false" data-menu-tab="food">Food</button>
-      </div>
-
-      <div class="menu-panels">
-        <ul class="menu-list is-active" data-menu-panel="coffee">
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>森のブレンド</h3>
-              <span class="menu-item-price">¥580</span>
-            </div>
-            <p>コクと香ばしさが調和した、CAFÉ MORI 定番のハウスブレンド。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>エチオピア ハラー シングルオリジン</h3>
-              <span class="menu-item-price">¥720</span>
-            </div>
-            <p>華やかなベリーの香りとすっきりとした酸味が特徴。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>カフェ・オ・レ</h3>
-              <span class="menu-item-price">¥650</span>
-            </div>
-            <p>深煎り豆と自家製ミルクフォームでつくる、まろやかな一杯。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>水出しアイスコーヒー</h3>
-              <span class="menu-item-price">¥680</span>
-            </div>
-            <p>じっくり8時間かけて抽出した、雑味のない澄んだ味わい。</p>
-          </li>
-        </ul>
-
-        <ul class="menu-list" data-menu-panel="sweets">
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>森の焼き菓子プレート</h3>
-              <span class="menu-item-price">¥780</span>
-            </div>
-            <p>スコーンとフィナンシェ、季節のフルーツを添えて。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>ほうじ茶のバスクチーズケーキ</h3>
-              <span class="menu-item-price">¥620</span>
-            </div>
-            <p>香ばしいほうじ茶と濃厚なチーズの組み合わせ。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>季節のタルト</h3>
-              <span class="menu-item-price">¥680</span>
-            </div>
-            <p>その時期に一番おいしいフルーツを使ったシェフ自慢の一品。</p>
-          </li>
-        </ul>
-
-        <ul class="menu-list" data-menu-panel="food">
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>森のモーニングプレート</h3>
-              <span class="menu-item-price">¥980</span>
-            </div>
-            <p>自家製パン、卵料理、季節野菜のサラダのセット。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>キノコと森野菜のキッシュ</h3>
-              <span class="menu-item-price">¥1,050</span>
-            </div>
-            <p>近郊農家から届く旬の野菜をたっぷり使用。</p>
-          </li>
-          <li class="menu-item">
-            <div class="menu-item-head">
-              <h3>本日のスープセット</h3>
-              <span class="menu-item-price">¥850</span>
-            </div>
-            <p>パンまたはライスと共に。日替わりでご用意します。</p>
-          </li>
-        </ul>
+  <!-- ===== SKILLS ===== -->
+  <section class="section section--muted" id="skills">
+    <div class="section-inner" data-animate>
+      <p class="section-eyebrow">Skills</p>
+      <h2 class="section-title">スキル</h2>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <p class="skill-name">HTML</p>
+          <div class="skill-bar"><span style="width: 90%;"></span></div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">CSS</p>
+          <div class="skill-bar"><span style="width: 85%;"></span></div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">JavaScript</p>
+          <div class="skill-bar"><span style="width: 70%;"></span></div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">Figma</p>
+          <div class="skill-bar"><span style="width: 65%;"></span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ACCESS ===== -->
-  <section class="access" id="access">
-    <div class="section-inner access-inner">
-      <div class="access-info" data-animate>
-        <p class="section-eyebrow">Access</p>
-        <h2 class="section-title">CAFÉ MORI へようこそ</h2>
-
-        <dl class="access-list">
-          <div class="access-row">
-            <dt>住所</dt>
-            <dd>〒606-0000<br>京都府京都市左京区森の道 3-14</dd>
-          </div>
-          <div class="access-row">
-            <dt>営業時間</dt>
-            <dd>8:00 - 19:00（L.O. 18:30）</dd>
-          </div>
-          <div class="access-row">
-            <dt>定休日</dt>
-            <dd>毎週水曜日</dd>
-          </div>
-          <div class="access-row">
-            <dt>電話</dt>
-            <dd>075-000-0000</dd>
-          </div>
-          <div class="access-row">
-            <dt>アクセス</dt>
-            <dd>市バス「森の道」停留所より徒歩3分</dd>
-          </div>
-        </dl>
-
-        <a href="#hero" class="btn btn--primary" data-nav-link>トップに戻る</a>
-      </div>
-
-      <div class="access-map" data-animate aria-hidden="true">
-        <div class="access-map-inner">
-          <span class="access-map-pin">📍</span>
-          <p>CAFÉ MORI</p>
+  <!-- ===== HOBBY ===== -->
+  <section class="section" id="hobby">
+    <div class="section-inner" data-animate>
+      <p class="section-eyebrow">Hobby</p>
+      <h2 class="section-title">趣味・興味</h2>
+      <div class="hobby-grid">
+        <div class="hobby-card">
+          <span class="hobby-icon">📷</span>
+          <p class="hobby-name">写真撮影</p>
+          <p class="hobby-desc">休日は街や自然を撮り歩くのが好きです。</p>
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">📚</span>
+          <p class="hobby-name">読書</p>
+          <p class="hobby-desc">小説やデザイン関連の書籍をよく読みます。</p>
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">☕</span>
+          <p class="hobby-name">カフェ巡り</p>
+          <p class="hobby-desc">気になるカフェを見つけて訪れています。</p>
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">🎨</span>
+          <p class="hobby-name">イラスト制作</p>
+          <p class="hobby-desc">趣味でイラストを描くこともあります。</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="contact" id="contact">
-    <div class="section-inner">
-      <div class="section-head" data-animate>
-        <p class="section-eyebrow">Contact</p>
-        <h2 class="section-title">お問い合わせ</h2>
-        <p class="section-lead">ご予約やご質問など、お気軽にお問い合わせください。1〜2営業日以内にご返信いたします。</p>
+  <section class="section section--muted" id="contact">
+    <div class="section-inner" data-animate>
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="contact-lead">ご連絡はこちらからお気軽にどうぞ。</p>
+      <div class="contact-links">
+        <a href="mailto:example@example.com" class="contact-link">
+          <span class="contact-icon">✉️</span>
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">🐙</span>
+          <span>GitHub</span>
+        </a>
+        <a href="https://x.com/" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">🐦</span>
+          <span>X (Twitter)</span>
+        </a>
       </div>
-
-      <form class="contact-form" id="contact-form" data-animate novalidate>
-        <div class="form-field">
-          <label for="contact-name">お名前</label>
-          <input type="text" id="contact-name" name="name" autocomplete="name" placeholder="山田 太郎">
-          <p class="form-error" id="error-name" role="alert"></p>
-        </div>
-
-        <div class="form-field">
-          <label for="contact-email">メールアドレス</label>
-          <input type="email" id="contact-email" name="email" autocomplete="email" placeholder="example@cafemori.jp">
-          <p class="form-error" id="error-email" role="alert"></p>
-        </div>
-
-        <div class="form-field">
-          <label for="contact-message">お問い合わせ内容</label>
-          <textarea id="contact-message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
-          <p class="form-error" id="error-message" role="alert"></p>
-        </div>
-
-        <button type="submit" class="btn btn--primary contact-submit">送信する</button>
-      </form>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="section-inner footer-inner">
-    <p class="footer-logo">CAFÉ MORI</p>
-    <p class="footer-copy">&copy; 2026 CAFÉ MORI. All rights reserved.</p>
-  </div>
+  <p>&copy; 2026 Hina Morita</p>
 </footer>
-
-<button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る" data-nav-link data-nav-target="#hero">↑</button>
 
 <script src="script.js"></script>
 </body>
